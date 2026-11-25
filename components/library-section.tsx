@@ -1,0 +1,5 @@
+import { ArrowIcon, BookIcon } from "@/components/icons";
+
+export function LibrarySection({ onAdd }: { onAdd: () => void }) {
+  return <section className="library-section" id="biblioteca" aria-labelledby="library-title"><div className="section-heading"><div><div className="eyebrow"><span className="eyebrow-line" /> EL ARCHIVO</div><h2 id="library-title">La biblioteca<span className="heading-period">.</span></h2></div><span className="section-index">01 / 02</span></div><div className="library-empty"><div className="empty-illustration"><BookIcon/><span>—</span></div><div className="empty-copy"><h3>Un espacio para el conocimiento</h3><p>Los fascículos incorporados aparecerán acá con su título, autor y cantidad de páginas.</p></div><span className="document-count">0 DOCUMENTOS</span></div><div className="library-caption"><span>COLECCIÓN DOCUMENTAL</span><span>Los datos bibliográficos se mostrarán tal como figuran en cada fascículo.</span></div><button className="text-link" type="button" onClick={onAdd}>Incorporar un fascículo <ArrowIcon /></button></section>;
+}

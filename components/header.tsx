@@ -1,0 +1,3 @@
+export function Header() {
+  return <header className="site-header"><div className="header-inner"><a className="brand" href="#inicio" aria-label="La botica de la Chinita, inicio"><img className="partner-logo" src="/logo-red-herramientas.png" alt="Red de Herramientas entre Mujeres" /><span className="brand-divider" aria-hidden="true" /><span className="brand-copy"><span className="brand-name">La botica <i>de la</i> Chinita<span className="brand-period">.</span></span><span className="brand-subtitle">Biblioteca documental de Fitoterapia China</span></span></a><div className="header-meta"><span className="header-dot" /> BIBLIOTECA DOCUMENTAL</div></div></header>;
+}
