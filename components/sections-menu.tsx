@@ -3,10 +3,11 @@
 import { useState } from "react";
 import { LibrarySection } from "@/components/library-section";
 import { AdminSection } from "@/components/admin-section";
+import type { FitotecaReadResult } from "@/lib/fitoteca-types";
 
 type Section = "library" | "admin";
 
-export function SectionsMenu() {
+export function SectionsMenu({ libraryResult }: { libraryResult: FitotecaReadResult }) {
   const [activeSection, setActiveSection] = useState<Section>("library");
 
   return <div className="sections-area">
@@ -15,7 +16,7 @@ export function SectionsMenu() {
       <button type="button" className={activeSection === "admin" ? "section-tab active" : "section-tab"} aria-current={activeSection === "admin" ? "page" : undefined} onClick={() => setActiveSection("admin")}>Incorporar PDF</button>
     </nav>
     <div className="section-content" key={activeSection}>
-      {activeSection === "library" ? <LibrarySection onAdd={() => setActiveSection("admin")} /> : <AdminSection />}
+      {activeSection === "library" ? <LibrarySection onAdd={() => setActiveSection("admin")} result={libraryResult} /> : <AdminSection />}
     </div>
   </div>;
 }
