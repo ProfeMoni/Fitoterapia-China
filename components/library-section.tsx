@@ -10,9 +10,9 @@ export function LibrarySection({ onAdd, result }: { onAdd: () => void; result: F
       <span className="section-index">01 / 02</span>
     </div>
     {result.ok && documents.length > 0 ? <ul className="document-list" aria-label="Documentos de Fitoteca China">
-      {documents.map((document, index) => <li className="document-row" key={`${document.numero_fasciculo ?? "fasciculo"}-${index}`}>
+      {documents.map((document, index) => <li className="document-row" key={`${document.numero ?? "fasciculo"}-${index}`}>
         <BookIcon />
-        <div className="document-copy"><h3>{document.titulo || "Título no disponible"}</h3><p>Fascículo {document.numero_fasciculo ?? "—"}</p></div>
+        <div className="document-copy"><h3>{document.titulo || "Título no disponible"}</h3><p>Fascículo {document.numero ?? "—"}</p></div>
         <span className="document-pages">{document.total_paginas ?? "—"} páginas</span>
       </li>)}
     </ul> : <div className="library-empty">

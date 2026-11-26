@@ -12,7 +12,7 @@ export async function getFitotecaDocuments(): Promise<FitotecaReadResult> {
 
   const { data, error } = await supabase
     .from("fitoteca_documentos")
-    .select("titulo, numero_fasciculo, total_paginas");
+    .select("titulo, numero, total_paginas");
 
   if (error) {
     return { ok: false, reason: "query" };
