@@ -1,6 +1,6 @@
 export type FitotecaDocument = {
   titulo: string | null;
-  numero_fasciculo: string | number | null;
+  numero: string | number | null;
   total_paginas: string | number | null;
 };
 
